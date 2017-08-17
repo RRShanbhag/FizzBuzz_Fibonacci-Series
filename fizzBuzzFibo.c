@@ -2,6 +2,17 @@
 #include <stdlib.h>
 
 void fibonacci(int N);
+void checkFizzBuzz(int Number);
+
+
+void checkFizzBuzz(int Number)
+{
+	if(Number % 3 == 0)
+		printf(", Buzz");
+	else
+		printf(", %d", Number);
+	return;
+}
 
 void fibonacci (int N)
 {
@@ -13,7 +24,7 @@ void fibonacci (int N)
 		int c = a + b;
 		a = b;
 		b = c;
-		printf(", %d", c);
+		checkFizzBuzz(c);
 	}
 	printf("\n");
 	return;
